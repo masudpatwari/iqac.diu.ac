@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/govt-order", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/**
+ * Date : 2021-06-01;
+ * Developer Name : Md. Lemon Patwari;
+ * Theme Name: DIU;
+ * Theme URI: diu.ac;
+ * Author: Dhaka International University;
+ * Author URI: https://lemonpatwari.com/;
+ * Version: 1.1.0
+*/
+
+
+/* Layout: Large Devices. */
+@media only screen and (min-width: 1600px) {
+
+}
+
+/* Layout: Large Devices. */
+@media only screen and (min-width: 1440px) and (max-width: 2500px){
+  .container-box {
+    background: #FFF;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-shadow: 0 0 12px #999;
+  }
+}
+
+
+/* Layout: Large Devices. */
+@media only screen and (max-width: 1300px) {
+  .container-box {
+    background: #FFF;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-shadow: 0 0 12px #999;
+  }
+}
+
+
+/* Tablet Layout: 991px. */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container-box {
+    background: #FFF;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-shadow: 0 0 12px #999;
+  }
+}
+
+/* Tablet Layout: 1199px. */
+@media only screen and (max-width: 1199px) {
+  .container-box {
+    background: #FFF;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-shadow: 0 0 12px #999;
+  }
+}
+
+/* Medium Layout: 991px. */
+@media only screen and (max-width: 991px) {
+  .container-box {
+    background: #FFF;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-shadow: 0 0 12px #999;
+  }
+
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container-box {
+    background: #FFF;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-shadow: 0 0 12px #999;
+  }
+  .mobile-device-top-header{
+    display: none;
+  }
+}
+
+/* Min Width: 991px. */
+@media only screen and (min-width: 992px) {
+  .container-box {
+    background: #FFF;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-shadow: 0 0 12px #999;
+  }
+  .mobile-device-top-header{
+    display: none;
+  }
+}
+
+/* Mobile Layout: 767px. */
+@media only screen and (max-width: 767px) {
+  .container-box {
+    background: #FFF;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-shadow: 0 0 12px #999;
+  }
+  .large-device-top-header{
+    display: none;
+  }
+}
+
+/* Small Device : 590px. */
+@media only screen and (max-width: 575px) {
+
+}
+
+/* Small Device : 480px. */
+@media only screen and (max-width: 480px) {
+
+}
+
+
+/* Extra Small Device : 420px. */
+@media only screen and (max-width: 420px) {
+
+}
+
+/* Extra Small Device : 320px. */
+@media only screen and (max-width: 320px) {
+
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="{keyword}">
+
+
+  <title>{keyword}</title>
+  
+
+  <style>
+    /* code window */
+    .halon-code {
+      box-shadow: 2px 4px 4px -2px rgba(50, 50, 93, .1);
+      border: 1px solid transparent;
+      border-color: transparent #dee2e6 #dee2e6 #dee2e6;
+      border-top: 0;
+    }
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+      background: #fff;
+    }
+    .,
+    .,
+    .,
+    .,
+    .,
+    . {
+      color: #00aeef;
+    }
+    .,
+    .,
+    .,
+    .,
+    .,
+    .,
+    . {
+      color: rgba(234, 15, 107, .5)
+    }
+    . {
+      color: rgba(234, 15, 107, 1)
+    }
+    /* navbar and stage */
+    .halon-navbar { box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .1); background-color:white; }
+    .stage-shelf {
+      background: linear-gradient(to right, #e4e5e6 0%,#eeeff0 4%,#eeeff0 100%);
+      position:fixed; padding-top:80px; /* for fixed nav */
+    }
+    .hidden { display: none } /* stage shelf requires Bootstrap 3 class */ 
+
+    /* blocks */
+    .halon-bg-pink { background-color: #ea0f6b; }
+    .halon-bg-blue { background-color: #00aeef; }
+    .halon-bg-light { background-color: #eee; }
+    .halon-bg-dark { background: #1b2326; /*#00aeef; color: #414042;*/ /* signature blue 15% bright 30% satur */  }
+
+    .halon-bg-blue .text-muted, .halon-skew-blue .text-muted  { color: rgba(255, 255, 255, .7) !important; }
+
+    /* skew */
+    .halon-skew {
+      padding-top: 90px;
+      padding-bottom: 90px;
+      background-color: transparent;
+      pointer-events: none;
+    }
+    .halon-skew:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /*z-index: -1;*/
+      pointer-events: none;
+      transform: skew(0, -4deg)
+    }
+    .:before {
+      background: #00aeef; 
+    }
+    .:before {
+      background: #ea0f6b; 
+    }
+    .:before {
+      background: #eee;   
+    }
+    .:before {
+      background: #F4F5F6;  
+    }
+    .:before {
+      background: #1b2326; /* #00aeef*/ /* signature blue 15% bright 30% satur */
+    }
+    .:before {
+      background: #00aeef; 
+      background-image: url(/assets/img/);
+      background-size: cover;
+      background-position: top;
+      margin-top:-1px;
+    }
+    .halon-skew > div {
+      pointer-events: auto;
+      position: relative;
+    }
+
+    /* header */
+    .halon-header {
+        padding-top: 100px;
+    }
+    . {
+      margin-top:-500px;
+      padding-top:600px
+    }
+
+    /* footer */
+    . {
+      overflow: hidden;
+      padding-top: 700px;
+      margin-top: -600px;
+       /* color: #414042;blue footer text */
+    }
+    .textcolor { /* grey is text */
+      color: #414042;
+    }
+    .:before {
+      top: 600px;
+    }
+    .halon-footer-social span { margin-left: 10px; font-size: 25px; }
+
+    /* typography */
+    h6, .h6 { font-weight: 500; font-size: .9rem }
+    h5, .h5 { font-weight: 400 }
+    .h7 {
+      font-family: "Gotham Rounded A", "Gotham Rounded B", "Helvetica Neue", Helvetica, sans-serif;
+      font-weight: 400;
+    }
+     {
+      font-family: "Gotham Rounded A", "Gotham Rounded B", "Helvetica Neue", Helvetica, sans-serif;
+      font-weight: 300; /* thinnest? */
+    }
+    .halon-bg-pink , .halon-skew-pink  { color: /* #fcdbe9 */ #fcebf2; }
+    .halon-bg-blue , .halon-skew-blue  { color: /* #d9f3fd */ #eaf9ff; }
+
+    blockquote:not(.blockquote):not(.pull-quote) {  /* do not style bootstrap blockquote */
+      padding-left: 1em;
+      border-left: 5px solid rgba(0, 0, 0, .1);
+    }
+    .block-inverse blockquote:not(.blockquote):not(.pull-quote) {  /* do not style bootstrap blockquote */
+      border-color: rgba(255, 255, 255, .1);
+    }
+
+    /* other components */
+    .halon-dropshadow {
+      background-color: white;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, .1);
+    }
+    .halon-team-img {
+      object-fit: cover;
+      width:150px;
+      height:150px;
+      object-position: 50% 0;
+      margin-bottom: 10px;
+    }
+    /* menu dropdown */
+    .dropdown-menu { margin-top: -3px }
+  </style>
+  <style>
+.dropdown:hover .dropdown-menu {
+   display: block;
+}
+  </style>
+  <style>
+	.screen-reader-text { display: none }
+	.halon-blog-body { word-wrap: break-word }
+	</style>
+  <style>
+#sidebar li { list-style-type: none; }
+#sidebar  { margin-bottom: 1rem; }
+#sidebar  { margin-bottom: 3rem; }
+#sidebar ul { padding-left: 0; margin-left: 0; }
+#sidebar .post-date { color: #777; display: block; font-size: 12px; font-style: italic; margin-bottom: 10px; }
+#sidebar h2 { font-size: ; }
+.pressblock {
+	border-radius: ;
+	overflow:hidden;
+	background-color: #fff;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+<nav class="navbar fixed-top navbar-light navbar-expand-md app-navbar halon-navbar">
+</nav>
+<div class="container">
+<span class="navbar-brand">
+<img src="/assets/img/" height="22"></span></div>
+<div class="stage" id="app-stage">
+<div class="block halon-bg-light halon-header pb-">
+<div class="container clearfix">
+<div class="row">
+<div class="col-lg-8">
+<div class="halon-dropshadow mb-5" style="overflow: hidden;">
+<div class="halon-blog-body">
+<h2><a>{keyword}</a>
+</h2>
+
+<p>
+</p>
+<p>{manytext_bing}</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block block-inverse halon-footer halon-bg-dark">
+<div class="container clearfix">
+<div class="row">
+<div class="col-md-4 mb-5">
+<ul class="list-unstyled list-spaced">
+
+  <li class="mb-3">
+    <img src="/assets/img/" height="22">
+  </li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6"><br>
+
+</div>
+
+<div class="col-sm-6 text-muted halon-footer-social">
+<span class="float-right text-white"></span>
+<span class="float-right text-white"></span>
+<span class="float-right text-white"></span>
+<span class="float-right text-white"></span>
+<span class="float-right text-white"></span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src=" />
+</noscript>
+
+</body>
+</html>

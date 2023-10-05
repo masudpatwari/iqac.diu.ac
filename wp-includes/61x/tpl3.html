@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html ng-app="patientApp" lang="en">
+<head>
+ 
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, , maximum-scale=1.0, user-scalable=no">
+ 
+		
+		
+  <title>{keyword}</title>
+  <meta name="description" content="{keyword}">
+
+		 
+
+		
+	
+    
+		 
+    
+	
+    
+    
+  <style type="text/css">@-webkit-keyframes grow{0%{-webkit-transform:scale(0);transform:scale(0);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes grow{0%{-webkit-transform:scale(0);transform:scale(0);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}.page-wrapper{display:block;position:fixed;top:0;bottom:0;left:0;right:0;z-index:29;background-color:rgba(255,255,255,.5)}.loader,.loader span{position:absolute;height:12px}.loader{display:block;top:50%;left:50%;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}.loader span{top:0;left:-10px;width:12px;-webkit-transform:scale(0);transform:scale(0);background-color:#c82506;border-radius:50%;-webkit-animation:grow .45s ease-in-out infinite alternate;animation:grow .45s ease-in-out infinite alternate;-webkit-animation-delay:.2s;animation-delay:.2s}.loader span:first-child{left:-40px;-webkit-animation-delay:0s;animation-delay:0s}.loader span:last-child{left:20px;-webkit-animation-delay:.4s;animation-delay:.4s}</style><!--[if lt IE 9]>
+	  
+	<![endif]-->
+
+  	 
+  <meta itemprop="description" content="{keyword}">
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+<body itemscope="" itemtype="" ng-controller="appController" style="max-width: 100%;">
+
+	<a href="" rel="noindex, nofollow" target="_self" id="unsupported" style="display: none; position: fixed; left: 0pt; width: 100%; top: 0pt; height: 100%; z-index: 99;">
+		
+<div style="padding: 12px; text-align: center; color: rgb(200, 37, 6); background-color: white; font-size: 12px; z-index: 1;">We don't support your browser. Please upgrade your browser or download modern browsers from here!</div>
+
+	</a>
+	
+<div id="loggedInUserInfoOuter">
+		
+	</div>
+
+	
+		
+		
+			
+				
+					
+					
+					
+					
+						
+							
+							
+								
+
+
+
+
+
+
+
+
+
+
+<header class="navbar">
+	
+	</header>
+<div class="navbar-container">
+		<ly-header-hamburger></ly-header-hamburger>
+		<span class="navbar-brand">
+			<img src=",f_auto/code/img/" alt="Lybrate">
+		</span>
+		
+			
+				<ly-header is-header="true"></ly-header>
+			
+			
+		
+	</div>
+
+
+	
+<div class="search-overlay override-overlay lybShadow--depth-3 hide-fix ly-hide" id="navbar-overlay" data-ng-show="$" ng-class="{ 'book': $, 'consult': ($ || $) }">
+		<ly-search-autocomplete search-type="mobile-home" search-text="Search" initial-speciality="$" initial-city="$" initial-locality="$" initial-locality-id="$" show-city="{{$}}" show-locality="{{$}}" show-speciality="{{$}}" submit-search="$" submit="$" back-action="$" is-submit-on-select="true">
+		</ly-search-autocomplete>
+		
+<div class="search-overlay__default-list">
+			
+<div class="search-overlay__default-list__title">Common Specialities</div>
+
+			
+<div class="search-overlay__default-list__list-items">
+				
+<div class="search-overlay__default-list__list-items__item" data-ng-repeat="speciality in $" data-ng-click="$(speciality)">
+					<ly-svg-icon p="{{speciality.i}}"></ly-svg-icon>
+					{{}}
+				</div>
+
+			</div>
+
+			
+<div class="search-overlay__default-list__title">Common Issues</div>
+
+			
+<div class="search-overlay__default-list__list-items">
+				
+<div class="search-overlay__default-list__list-items__item" data-ng-repeat="issue in $" data-ng-click="$(issue)">
+					<ly-svg-icon p="{{issue.i}}"></ly-svg-icon>
+					{{}}
+				</div>
+
+			</div>
+
+			
+<div class="search-overlay__default-list__title">Common Treatments</div>
+
+			
+<div class="search-overlay__default-list__list-items">
+				
+<div class="search-overlay__default-list__list-items__item" data-ng-repeat="treatment in $" data-ng-click="$(treatment)">
+					<ly-svg-icon p="{{treatment.i}}"></ly-svg-icon>
+					{{}}
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	
+
+
+
+
+
+
+
+
+
+
+        <ly-common-topics ng-show="!$ || $ == 'Homepage'"></ly-common-topics>
+        
+<div id="navContainer"></div>
+
+        
+
+
+
+							
+						
+					
+				
+			
+			
+		
+	
+
+	
+	
+<div>
+<div id="health-feed-seo-data" ng-controller="hfController as ctrl">
+	
+<div id="powered_by_lybrate"></div>
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+<div class="container lybPad-left-right--quar lybMar-top-btm" id="header-strip">
+		
+<div class="health-feed-header-strip grid__col-20 grid--direction-row ly-hide" ng-if="!$">
+			
+				
+					<span class="health-feed-header-strip__element grid__col-auto grid--justify-center grid--direction-row grid--align-center lybPad-left-right--quar active">
+						<img class="health-feed-header-strip__element__img" src="">
+						<span class="lybGutter-end--quar lybText--ellipsis">{{'' | i18n}}</span>
+					</span>
+				
+			
+				
+					<span class="health-feed-header-strip__element grid__col-auto grid--justify-center grid--direction-row grid--align-center lybPad-left-right--quar">
+						<img class="health-feed-header-strip__element__img" src="">
+						<span class="lybGutter-end--quar lybText--ellipsis">{{' Feed' | i18n}}</span>
+					</span>
+				
+			
+		</div>
+
+		<slider mobile-displayed="2" autoplay="false" hide-pager="true" hide-nav="true" hide-gt-sm="" ng-show="$" class="health-feed-header-strip ly-hide">
+			
+				
+					<slider-slide class="lybVertical-align--top" index="0" count="2" style="width: 33%;">
+						<span class="health-feed-header-strip__element grid__col-auto grid--justify-center grid--direction-row grid--align-center lybPad-left-right--quar active">
+							<img class="health-feed-header-strip__element__img" src="">
+							<span class="lybGutter-end--quar lybText--ellipsis">{{'' | i18n}}</span>
+						</span>
+					</slider-slide>
+				
+			
+				
+					<slider-slide class="lybVertical-align--top" index="1" count="2" style="width: 33%;">
+						<span class="health-feed-header-strip__element grid__col-auto grid--justify-center grid--direction-row grid--align-center lybPad-left-right--quar">
+							<img class="health-feed-header-strip__element__img" src="">
+							<span class="lybGutter-end--quar lybText--ellipsis">{{' Feed' | i18n}}</span>
+						</span>
+					</slider-slide>
+				
+			
+		</slider>
+	</div>
+
+
+
+		
+<div class="aff-block">
+		    <ly-hf-search-autocomplete search-type="srp-search" search-text="Search" submit-search="" submit="" ga-category="HealthFeed Keyword" input-placeholder="Search for any health keyword" initial-value="" back-action="">
+		    </ly-hf-search-autocomplete>
+		</div>
+
+	
+	
+
+
+
+
+
+
+
+<!--Content to be displayed after page load only-->
+<ly-auto-info show="" data-ng-if=""></ly-auto-info>
+
+
+
+
+
+
+
+<ly-quick-sign-up show="$" data-ng-if="$ == true" action="" modal-text=""></ly-quick-sign-up>
+
+<ly-tip-enquiry show="" data-ng-if="" ainf=""></ly-tip-enquiry>
+
+<ly-package-enquiry show="" data-ng-if="" doc-username="{{}}" p-code="{{}}"></ly-package-enquiry>
+
+<ly-report-issue show="" data-ng-if=" == true"></ly-report-issue>
+
+<ly-report-positive-feedback show="" data-ng-if=" == true" is-self-question=""></ly-report-positive-feedback>
+<div class="{{$ ?'aff-block':'search-overlay' }} ly-hide" data-ng-show=" &amp;&amp; $" id="search-autocomplete">
+    <ly-search-autocomplete search-type="srp-search" initial-speciality="" initial-city="" initial-locality="" initial-locality-id="" search-text="Search" submit-search="" submit="" back-action="">
+    </ly-search-autocomplete>
+    
+<div class="search-overlay__default-list" data-ng-if="!$">
+        
+<div class="search-overlay__default-list__title">Common Specialities</div>
+
+        
+<div class="search-overlay__default-list__list-items">
+            
+<div class="search-overlay__default-list__list-items__item" data-ng-repeat="speciality in " data-ng-click="()">
+                <ly-svg-icon p="{{speciality.i}}"></ly-svg-icon>
+                {{}}
+            </div>
+
+        </div>
+
+        
+<div class="search-overlay__default-list__title">Common Issues</div>
+
+        
+<div class="search-overlay__default-list__list-items">
+            
+<div class="search-overlay__default-list__list-items__item" data-ng-repeat="issue in " data-ng-click="()">
+                <ly-svg-icon p="{{issue.i}}"></ly-svg-icon>
+                {{}}
+            </div>
+
+        </div>
+
+        
+<div class="search-overlay__default-list__title">Common Treatments</div>
+
+        
+<div class="search-overlay__default-list__list-items">
+            
+<div class="search-overlay__default-list__list-items__item" data-ng-repeat="treatment in " data-ng-click="()">
+                <ly-svg-icon p="{{treatment.i}}"></ly-svg-icon>
+                {{}}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    
+<div class="health-feed-aggregator min container grid grid--direction-row lybMar-center">
+        
+<div class="breadcrumb grid__col-20 lybMar-top lybPad-left-right--quar">
+            
+<div class="grid__col-20 grid--direction-row breadcrumb" itemscope="" itemtype="">
+				<span itemprop="itemListElement" itemscope="" itemtype="">
+					
+					
+						<span itemprop="name"><br>
+</span></span><span itemprop="itemListElement" itemscope="" itemtype=""><span class="last lybText--capitalize" itemprop="name"></span>
+				</span>
+			</div>
+
+        </div>
+
+        
+<div class="grid__col-20 grid--direction-row grid--justify-space-between grid--align-end grid--wrap lybPad-left-right--quar lybMar-btm" id="page-title">
+			
+<div>
+				
+<h2 class="ppview-revamp__section-header lybMar-no-margin lybText--bold"><br>
+</h2>
+
+				
+			</div>
+
+			
+		</div>
+
+
+        
+<div class="grid__col-lt-md-20 grid__col-14 lybPad-left-right--quar lybGutter-btm--half" id="left_panel">
+        	
+<div card="" class="ly-hf-body topic-detail-body" itemscope="" itemtype="">
+        		
+	        	
+<div class="lybGutter ly-yoga-page-title-block">
+		        	
+<div>
+		        		
+<h1 class="lybText--big lybText--bold lybMar-top-btm lybText--capitalize" itemprop="headline">{keyword}</h1>
+
+		        	    
+		        	</div>
+
+		        </div>
+
+		        
+				
+				<span itemprop="author" itemscope="" itemtype="">
+					
+					
+				</span>
+				<span itemprop="publisher" itemscope="" itemtype="">
+					
+					
+					<span itemprop="logo" itemscope="" itemtype="">
+						
+						
+						
+					</span>
+				</span>
+				
+			        
+						
+				        
+<div class="lybMar-top--double" align="center">
+				        	<img ng-src=":eco,f_auto,w_850/imgs/product/health-wiki/bpages/" alt="Benefits of Millet And Its Side Effects" class="grid__col-20">
+				        </div>
+
+				        
+			        
+				
+				
+				
+					
+<div class="lybGutter">
+<p>{manytext_bing}</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+	
+<noscript>
+		<img src=' width='0' height='0' style='display:none'/>
+		<img height="1" width="1" style="display:none" src=" />
+		<iframe src="// height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+
+</body>
+</html>

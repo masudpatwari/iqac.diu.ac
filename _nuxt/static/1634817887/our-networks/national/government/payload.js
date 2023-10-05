@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/our-networks/national/government", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/media/photos", {data:[{}],fetch:{},mutations:[]});

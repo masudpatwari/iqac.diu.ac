@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/law-and-policy", {data:[{}],fetch:{},mutations:[]});

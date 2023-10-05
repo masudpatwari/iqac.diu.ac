@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/about-us/iqac", {data:[{}],fetch:{},mutations:[]});
